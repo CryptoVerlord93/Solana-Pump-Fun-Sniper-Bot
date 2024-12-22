@@ -1,4 +1,4 @@
-## Sfupu: Solana Pump Fun Sniper Bot – Fast, Free & Open Source Automated Trading Bot (Updated December 2024)
+## Sfupu: Solana Pump Fun Sniper Bot – Fast, Free & Open Source Automated Trading Bot (Updated January 2025)
 
 Sfupu is the ultimate Pump Fun Sniper Bot for automated trading on Pump.fun tokens. Designed to excel on the Solana blockchain, Sfupu detects new liquidity pools, executes trades with precision, and optimizes profits using customizable strategies.
 
